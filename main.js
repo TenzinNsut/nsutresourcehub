@@ -8,3 +8,9 @@ toggleButton.addEventListener('click', () => {
 
 
 
+
+
+// logo click button
+function home(){
+    location.replace("/index.html")
+}

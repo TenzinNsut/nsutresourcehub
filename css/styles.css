@@ -22,7 +22,6 @@
 
 
 
-
 /* ------------------------------ N A V I G A T I O N ------------------------------- */
 .navbar{
     display: flex;
@@ -42,7 +41,7 @@
     transition: 350ms transform ease-in-out;
 }
 .img-container > img:hover{
-    cursor: pointer;
+    cursor:pointer;
     transform: scale(1.1);
 }
 
@@ -69,6 +68,7 @@
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-family:'Hind', sans-serif;
 
 }
 
@@ -112,7 +112,7 @@
 /* -------------------R E S P O N S I V E - N A V B A R ------------------------- */
 
 
-@media (max-width:600px) {
+@media (max-width:576px) {
     .toggle-button{
     display: flex; /*display button*/
     }
@@ -125,6 +125,7 @@
 
     .navbar{
         flex-direction: column;
+
         /* align-items: flex-start; */
         
     }
@@ -135,6 +136,7 @@
         z-index: 9999;
         flex-direction: column;
         width: 100%; /*aligining text to center and eaiser to click*/
+
     }
 
     .navbar-links li{
@@ -166,10 +168,15 @@
 
 
     /* onlclick make it active */
-    .navbar-links.active{
+    .navbar-links.active {
         display: flex;
+     
     }  
 }
+
+
+
+
 
 
 
@@ -202,9 +209,9 @@
 }
 .box > img{
     position: absolute;
-    width: 100%;
-    height: 11.25rem;
-    bottom: 0%;
+    width:100%;
+    height:180px;
+    bottom:0%;
     z-index: 2;
     object-fit:contain;
 }
@@ -221,15 +228,15 @@
 }
 .intro > div{
     color: white;
-    position: absolute;
-    z-index: 10;
-    margin-top: 300px;
+    /* position: absolute;
+    z-index: 10; */
+    margin-top: 150px;
   
 }
 
 .intro #head{
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: bolder;
 
 }
@@ -237,7 +244,7 @@
     font-family:'Hind', sans-serif;
     font-weight: 200;
     letter-spacing: 2px;
-    margin-top: 360px;
+    margin-top: unset;
 
 }
 
@@ -249,7 +256,40 @@
 
 /* -----------------------------------------------S E C T I O N 2----------------------------------------------- */
 
+
+
 .section2{
-    background-color: #212121;
-    padding: 100px 200px
+    padding: 5rem 5rem
+}
+
+@media(max-width:576px){
+
+    /* .intro #head{
+        margin-top: 5rem;    
+        font-size: 3rem;
+    }
+    .intro #sub{
+        margin-top: 9rem;
+        font-size: 15px;
+
+    } */
+    .box > img{
+        height: 50px;
+
+    }
+    .intro > div{
+        margin-top: 7.8125rem;
+    }
+
+    .intro #head{
+        font-size: 1.875rem;
+        letter-spacing: 2px;
+    }
+    .intro #sub{
+        font-size: 0.625rem;
+        margin-top: 0px;
+    }
+    .section2{
+        padding: 3rem 3rem;
+    }
 }

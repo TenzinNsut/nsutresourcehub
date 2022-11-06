@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* -------------------------C O L O R - V A R I A B L E S ------------------------ */
+:root{
+    --purple: #8c38ff;
+    --dark: #212121;
+    --green: #2ECDAA;
+    --grey: #71726C;
+}
+
+
+
+
+/* ------------------------------ N A V I G A T I O N ------------------------------- */
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000000;
+}
+
+
+/*----------L O G O----------- */
+
+.img-container{
+    margin-top: 0.5rem;
+}
+.img-container > img{
+    width: 200px;
+    transition: 350ms transform ease-in-out;
+}
+.img-container > img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+/* nav-links */
+
+.navbar-links ul{
+    display: flex;
+    margin: 0; /*fixing margin and padding between each ul item*/
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-links li{
+    list-style-type: none;
+    transition: 250ms transform ease-out;
+
+}
+
+
+.navbar-links li a{
+    text-decoration: none;
+    color: var(--grey);
+    margin: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+}
+
+.selected{
+    color:var(--green) !important;
+}
+
+
+.navbar-links ul li:hover, ul li a:hover{
+    transform: scale(1.1);
+    color: var(--green);
+   
+}
+
+
+
+.toggle-button{
+    /* position item to the  top left of the screen */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+   display: none; /*to only show on mobile screen*/
+   flex-direction: column; /*spans are in column*/
+   justify-content: space-between;/*add space between each span*/
+
+
+   width: 30px; 
+   height: 21px;
+}
+
+.toggle-button .bar{
+    height: 3px; /*height of actual span  bar*/
+    width: 100%;
+
+    background-color: var(--grey);
+    border-radius: 10px;
+}
+
+
+/* -------------------R E S P O N S I V E - N A V B A R ------------------------- */
+
+
+@media (max-width:600px) {
+    .toggle-button{
+    display: flex; /*display button*/
+    }
+   
+    .navbar-links{
+     /*hide navlinks*/ 
+     display: none;  
+    width: 100%; /*aligining the text to center*/
+    }
+
+
+    .navbar{
+        flex-direction: column;
+        /* align-items: flex-start; */
+        
+    }
+    .navbar-links ul{
+        position: absolute;
+        background: black ;
+        height: 100vh;
+        z-index: 9999;
+        flex-direction: column;
+        width: 100%; /*aligining text to center and eaiser to click*/
+    }
+
+    .navbar-links li{
+        text-align: center;
+        margin: 50px auto;
+        /* display: block; */
+    }
+    .navbar-links li a{
+        /* margin-top: 3rem;
+        padding: 1rem 1rem ; */
+    }
+    .img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img-container> img{
+        width: 100px;
+    }
+    
+
+    .navbar-links ul li:hover, ul li a:hover{
+    transform: scale(1);
+    color: var(--green);  
+    }
+
+    
+
+
+
+    /* onlclick make it active */
+    .navbar-links.active{
+        display: flex;
+    }  
+}
+
+
+
+
+
+/* ======================================================================= */
+
+
+/* ---------------F I R S T - S E C T I O N ----------------------- */
+.first-section{
+    height: 100vh;
+    background: #000000;
+
+}
